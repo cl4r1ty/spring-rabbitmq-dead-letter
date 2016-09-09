@@ -1,7 +1,4 @@
 language: java
 
-jdk:
-  - oraclejdk8
-  
-script:
-  - mvn clean compile com.srcclr:srcclr-maven-plugin:scan
+after_success:
+  - curl https://download.sourceclear.com/ci | bash
